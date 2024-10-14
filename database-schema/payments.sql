@@ -1,0 +1,7 @@
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY IDENTITY(1,1),
+    ConsumerID INT NOT NULL,
+    AmountPaid DECIMAL(10,2) NOT NULL,
+    PaymentDate DATETIME NOT NULL,
+    FOREIGN KEY (ConsumerID) REFERENCES Consumers(ConsumerID) ON DELETE CASCADE
+);
